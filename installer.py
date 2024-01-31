@@ -2,9 +2,7 @@ import os
 import customtkinter
 
 
-
-
-
+import winshell
 
 
 
@@ -75,10 +73,11 @@ def install():
     ## save_directory = input("Enter the directory to save the Python file:\n")
     ## make it desktop by default instead 
     save_directory = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop') 
-    
+    desktop_dir = winshell.desktop()
+    print("save dir  " , save_directory , "desktop dir :" , desktop_dir)
+    save_directory = desktop_dir
     # Python file name
-    ## python_file_name = input("Enter the Python file name (with .py extension):\n")
-    ## give it default name instead
+
     python_file_name = "turbo.py"
 
     # Create Python file
